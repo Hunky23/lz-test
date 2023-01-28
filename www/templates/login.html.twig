@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Вход / регистрация{% endblock %}
+
+{% block body %}
+    <section class="auth">
+        <div class="container auth__container">
+            <div class="auth__img-wrapper">
+                <img class="auth__img" src="assets/images/cat.jpg" width="737" height="825" alt="cat">
+
+                <div class="auth__desc">
+                    <span class="auth__desc-title">Lorem Ipsum is simply</span>
+
+                    <span class="auth__desc-subtitle">Lorem Ipsum is simply</span>
+                </div>
+            </div>
+
+            <div class="auth__screen auth-screen">
+                <h1 class="auth-screen__title">Welcome to lorem..!</h1>
+
+                <div class="auth-screen__switcher js-switcher-trigger">
+                    <div class="auth-screen__switcher-element active">Login</div>
+
+                    <div class="auth-screen__switcher-element">Register</div>
+
+                    <div class="auth-screen__switcher-btn"></div>
+                </div>
+
+                <p class="auth-screen__text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+
+                <form class="auth-form active js-auth-form" action="/login">
+                    <label class="auth-form__label" for="login-form-user-name">User Name</label>
+                    <input id="login-form-user-name" class="auth-form__field" name="userName" type="text" placeholder="Enter your User name">
+
+                    <label class="auth-form__label" for="login-form-password">Password</label>
+                    <div class="auth-form__field-wrapper">
+                        <div class="auth-form__password-visible-wrapper js-password-visible-trigger">
+                            <svg class="auth-form__password-visible active">
+                                <use xlink:href="assets/images/sprites/sprites.svg#invisible"></use>
+                            </svg>
+
+                            <svg class="auth-form__password-visible">
+                                <use xlink:href="assets/images/sprites/sprites.svg#visible"></use>
+                            </svg>
+                        </div>
+
+                        <input id="login-form-password" class="auth-form__field" name="password" type="password" placeholder="Enter your Password">
+                    </div>
+
+                    <a class="auth-form__forgot-password" href="#">Forgot Password?</a>
+
+                    <div class="auth-form__response-field js-auth-form-response"></div>
+
+                    <button class="auth-form__submit">Login</button>
+                </form>
+
+                <form class="auth-form js-auth-form" action="/register">
+
+                    <label class="auth-form__label" for="register-form-email">Email Address</label>
+                    <input id="register-form-email" class="auth-form__field" name="email" type="email" placeholder="Enter your Email Address">
+
+                    <label class="auth-form__label" for="register-form-user-name">User Name</label>
+                    <input id="register-form-user-name" class="auth-form__field" name="userName" type="text" placeholder="Enter your User name">
+
+                    <label class="auth-form__label" for="register-form-password">Password</label>
+                    <div class="auth-form__field-wrapper">
+                        <div class="auth-form__password-visible-wrapper js-password-visible-trigger">
+                            <svg class="auth-form__password-visible active">
+                                <use xlink:href="assets/images/sprites/sprites.svg#invisible"></use>
+                            </svg>
+
+                            <svg class="auth-form__password-visible">
+                                <use xlink:href="assets/images/sprites/sprites.svg#visible"></use>
+                            </svg>
+                        </div>
+
+                        <input id="register-form-password" class="auth-form__field" name="password" type="password" placeholder="Enter your Password">
+                    </div>
+
+                    <a class="auth-form__forgot-password" href="#">Forgot Password?</a>
+
+                    <div class="auth-form__response-field js-auth-form-response"></div>
+
+                    <button class="auth-form__submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <script src="assets/js/main.js"></script>
+    </footer>
+{% endblock %}

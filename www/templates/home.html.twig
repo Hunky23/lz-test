@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block body %}
+    <main class="home-page">
+        <div class="container home-page__container">
+            <h1 class="home-page__title">Приветствую на главной странице проекта</h1>
+
+            <b>Какие папки есть в проекте и за что они отвечают?</b>
+
+            <p>
+                src - исходные файлы с вёрсткой<br>
+                dist - собранная вёрстка готовая для отображения в браузере<br>
+                www - Framework Symfony с готовым для развёртывания проектом
+            </p>
+
+            <b>У сайта есть следующие разделы:</b>
+
+            <p>
+                <a href="/login">Форма авторизации / регистрации</a>
+            </p>
+
+            <p>
+                <a href="/list">Страница для скачки pdf файла с таблицей людей в очереди</a>
+            </p>
+        </div>
+    </main>
+{% endblock %}

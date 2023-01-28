@@ -1,0 +1,68 @@
+.auth-screen {
+  padding-left: 75px;
+  padding-right: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    margin-bottom: 25px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  &__switcher {
+    margin-bottom: 50px;
+    padding: 10px 15px;
+    width: 330px;
+    position: relative;
+    display: flex;
+    background: #f8eddd;
+    border-radius: 35px;
+  }
+
+  &__switcher-element {
+    cursor: pointer;
+    padding: 10px;
+    color: #9e896a;
+    text-align: center;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    flex: 1 1 100%;
+    position: relative;
+    z-index: 1;
+
+    &.active {
+      color: #fff;
+    }
+  }
+
+  &__switcher-btn {
+    left: 15px;
+    width: calc(50% - 15px);
+    height: calc(100% - 20px);
+    position: absolute;
+    background: #9e896a;
+    transition: left .2s ease;
+    border-radius: 35px;
+
+    &.active {
+      left: 50%;
+    }
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    color: #5b5b5b;
+  }
+  
+  @media (max-width: 576px) {
+    padding: unset;
+
+    &__switcher {
+      width: 315px;
+    }
+  }
+}

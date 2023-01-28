@@ -1,0 +1,36 @@
+/* Миксины */
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url('../fonts/#{$file_name}.woff') format('woff'), url('../fonts/#{$file_name}.woff2') format('woff2'), url('../fonts/#{$file_name}.ttf') format('ttf'), url('../fonts/#{$file_name}.eot') format('eot');
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+@import 'fonts';
+
+/* Сброс стилей */
+@import 'reset';
+
+/* Общие стили */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: normal;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  max-width: 1440px;
+}
+
+/* Home page */
+@import 'blocks/home-page';
+
+/* Auth */
+@import 'blocks/auth/auth';
+@import 'blocks/auth/auth-screen';
+@import 'blocks/auth/auth-form';

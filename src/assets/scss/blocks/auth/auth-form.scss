@@ -1,0 +1,78 @@
+.auth-form {
+  width: 100%;
+  display: none;
+  align-self: flex-start;
+  flex-direction: column;
+
+  &.active {
+    display: flex;
+  }
+
+  &__label {
+    margin-bottom: 10px;
+    align-self: flex-start;
+  }
+
+  &__field {
+    padding: 15px 30px;
+    font-weight: 300;
+    width: 100%;
+    border: 1px solid #9e896a;
+    border-radius: 40px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &::placeholder {
+      color: #acacac;
+    }
+  }
+
+  &__field-wrapper {
+    width: 100%;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__password-visible {
+    cursor: pointer;
+    top: 50%;
+    right: 25px;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    display: none;
+    transform: translateY(-50%);
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__forgot-password {
+    margin-bottom: 60px;
+    font-size: 12px;
+    font-weight: 300;
+    align-self: flex-end;
+  }
+
+  &__response-field {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__submit {
+    padding: 15px 95px;
+    color: #fff;
+    font-size: 16px;
+    align-self: flex-end;
+    background: #9e896a;
+    border-radius: 35px;
+  }
+}

@@ -1,0 +1,21 @@
+.home-page {
+  &__container {
+    padding-top: 100px;
+    font-size: 20px;
+  }
+
+  &__title {
+    margin-bottom: 100px;
+    text-align: center;
+  }
+
+  b,
+  p {
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  a {
+    color: rgb(0, 102, 204);
+  }
+}

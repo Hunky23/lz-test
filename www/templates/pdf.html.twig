@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>pdf</title>
+
+    <style>
+        body {
+            font-family: 'DejaVu Sans', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="margin: 0 auto; display: block; width: 500px;">
+        <table width="100%" border="1">
+            <tr>
+                <td>
+                    Имя
+                </td>
+
+                <td>
+                    Фамилия
+                </td>
+
+                <td>
+                    Дата и время добавления
+                </td>
+            </tr>
+
+            {% for person in persons %}
+                <tr>
+                    <td>
+                        {{ person.getName() }}
+                    </td>
+
+                    <td>
+                        {{ person.getSurname() }}
+                    </td>
+
+                    <td>
+                        {{ person.getCreateAt()|date('Y-m-d H:i:s') }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
